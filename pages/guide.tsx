@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Script from 'next/script';
 import { useEffect } from 'react';
 
 type GUIDE_LIST = [
@@ -15,15 +14,6 @@ type Props = {
 };
 
 const GuidePage: NextPage<Props> = ({ data }: Props) => {
-  useEffect(() => {
-    const stVideo = document.getElementById('stvideo');
-    if (stVideo != undefined) {
-      stVideo.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-      });
-    }
-  });
-
   return (
     <>
       <Head>
